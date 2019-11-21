@@ -1,21 +1,72 @@
-# This is the title of my deck
+import { highlight } from "mdx-deck/themes";
+
+export const themes = [highlight];
+
+# React + typescript: What? Why? How?
 
 ---
 
-# About Me
+## Michal Czaplinski
 
-- My name's Michal Czaplinski
-- I work at [frontity.org](frontity.org)
-
----
-
-```jsx
-```
+- I work at [frontity.org](https://frontity.org)
+- Hablo un poco de español también 😉
+- twitter: [@c_z_a_p_l_a](https://twitter.com/c_z_a_p_l_a)
 
 ---
 
-import Demo from "./Demo";
+# The What
 
-## <Demo />
+- Typescript is just javascript + (optional) typesystem which compiles to regular javascript
 
-# The end
+---
+
+# Why would you use typescript
+
+- vscode autocompletion (function params, react props)
+- way better refactoring
+- maybe even prevents bugs 🤪
+
+---
+
+# What makes TS special
+
+- The type system is gradual (types are optional)
+- Your code will always "compile"
+- Treat the compiler errors as **"just"** suggestions !!!
+
+---
+
+# What makes TS special
+
+- Type system is structural (as opposed to nominal)
+- You describe the **shape** of your data
+- The types can be "separate" from the code
+
+---
+
+# Fun fact
+
+TS is turing complete [https://github.com/Microsoft/TypeScript/issues/14833](https://github.com/Microsoft/TypeScript/issues/14833)
+
+---
+
+# Demo time !!!
+
+---
+
+# How
+
+- Opt in for a single file: `// @ts-check`
+- Start a new react project: `npx create-react-app my-app --typescript`
+- Add to an existing project using babel:
+  - `npm install --save-dev @babel/preset-typescript`
+  - create a `tsconfig.json` and add a `noEmit: true` option
+
+---
+
+# Thank you !!!
+
+- Heljsberg on compilers as APIs:
+  https://www.youtube.com/watch?v=wSdV1M7n4gQ
+- Heljsberg on TS:
+  https://www.youtube.com/watch?v=ET4kT88JRXs
