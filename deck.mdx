@@ -1,6 +1,7 @@
-import { highlight } from "mdx-deck/themes";
-
-export const themes = [highlight];
+import { lobster } from "mdx-deck/themes";
+import { default as t } from "./theme";
+import "./style.css";
+export const theme = t;
 
 # React + typescript: What? Why? How?
 
@@ -22,20 +23,28 @@ export const themes = [highlight];
 
 ---
 
-# Why would you use typescript
+# Why would you use typescript?
 
 - VSCode autocompletion (function params, react props)
-- way better refactoring
-- maybe even prevents bugs 🤪
+- Way better refactoring
+- Maybe even prevents bugs 🤪
 
 ---
 
-# What makes TS special
+Typescript adds a **static** type system
+
+---
 
 - All javascript is valid typescript
-- The type system is gradual (types are optional)
 - Your code will always "compile"
+- Compiling == removing the type information (example)
+
+---
+
+# Type system
+
 - Think of the typechecker and compiler as separate
+- The type system is gradual (types are optional)
 - Treat the errors as **"just"** suggestions !!!
 - The types can be "separate" from the code [https://definitelytyped.org/](https://definitelytyped.org/)
 
@@ -53,15 +62,17 @@ TS type system is turing complete [https://github.com/Microsoft/TypeScript/issue
 
 # How
 
-- Opt in for a single file: `// @ts-check`
-- Start a new react project: `npx create-react-app my-app --typescript`
+- Opt in for a single file: <code style={{color: "#000f00" }}>// @ts-check</code>
+- Start a new react project: <code style={{color: "#000f00" }}>npx create-react-app my-app --typescript</code>
 - Add to an existing project using babel:
-  - `npm install --save-dev @babel/preset-typescript`
-  - create a `tsconfig.json` and add a `noEmit: true` option
+  - <code style={{color: "#000f00" }}>npm i -D @babel/preset-typescript</code>
+  - create a <code style={{color: "#000f00" }}>tsconfig.json</code> and add a <code style={{color: "#000f00" }}>noEmit: true</code> option
 
 ---
 
 # Thank you !!!
+
+- [@c_z_a_p_l_a](https://twitter.com/c_z_a_p_l_a)
 
 - Heljsberg on compilers as APIs:
   https://www.youtube.com/watch?v=wSdV1M7n4gQ
