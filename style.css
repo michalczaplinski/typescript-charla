@@ -3,5 +3,5 @@ code {
   border-radius: 3px;
 }
 a {
-  color: #ffd50e;
+  color: #ffd50e !important;
 }
